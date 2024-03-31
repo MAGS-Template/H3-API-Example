@@ -14,13 +14,13 @@ namespace H3_PostgresRESTFulAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Configuration.AddEnvironmentVariables();
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            string connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
+
             builder.Services.AddDbContext<AppDBContext>(options =>
                 options.UseNpgsql(connectionString));
 
