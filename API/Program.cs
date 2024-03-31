@@ -1,11 +1,6 @@
 using H3_PostgresRESTFulAPI.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
-using System.Configuration;
 
 namespace H3_PostgresRESTFulAPI
 {
@@ -19,9 +14,12 @@ namespace H3_PostgresRESTFulAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            IConfiguration Configuration = builder.Configuration;
+            string connectionString = Configuration.GetConnectionString("DefaultConnection") ?? Environment.GetEnvironmentVariable("DefaultConnection");
+
 
             builder.Services.AddDbContext<AppDBContext>(options =>
-                options.UseNpgsql(Environment.GetEnvironmentVariable("DefaultConnection")));
+                options.UseNpgsql(connectionString));
 
             var app = builder.Build();
 
