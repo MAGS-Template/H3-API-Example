@@ -19,10 +19,9 @@ namespace H3_PostgresRESTFulAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            string connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
 
             builder.Services.AddDbContext<AppDBContext>(options =>
-                options.UseNpgsql(connectionString));
+                options.UseNpgsql(Environment.GetEnvironmentVariable("DefaultConnection")));
 
             var app = builder.Build();
 
