@@ -1,7 +1,7 @@
 # API Eksempel til H3
 <table>
   <tr>
-    <th align="center" width='350'>
+    <th align="center" width='300'>
       <img width="441" height="1">
       <p>
         <small>
