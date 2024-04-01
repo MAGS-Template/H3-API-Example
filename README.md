@@ -5,7 +5,7 @@
       <img width="441" height="1">
       <p>
         <small>
-          <p> Her kan man følge eksemplet her til at opsætte en ASP.NET Core web API med C#, Entity Framework og Postgres </p>
+          <p> Her kan man følge eksemplet til at opsætte en ASP.NET Core web API med C#, Entity Framework og Postgres </p>
            <p> Til eksemplet bliver der brugt Postgres fra <a href="https://neon.tech/">Neon.tech</a> og Docker til at udgive applikationen på <a href="https://render.com/">Render.com</a>! </p>     
         </small>
       </p>
