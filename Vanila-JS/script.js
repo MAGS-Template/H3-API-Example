@@ -82,19 +82,23 @@ document
         console.error("Error:", error);
       });
   });
-function populateOwnerDropdown() {
-  fetch("https://h3-api.onrender.com/api/Users")
-    .then((response) => response.json())
-    .then((users) => {
-      const ownerIdSelect = document.getElementById("ownerId");
-      users.forEach((user) => {
-        const option = document.createElement("option");
-        option.value = user.id;
-        option.textContent = user.id + ": " + user.username;
-        ownerIdSelect.appendChild(option);
-      });
-    })
-    .catch((error) => console.error("Error fetching users:", error));
+
+// Funktion til at hente brugerdata og udfylde dropdown
+async function populateOwnerDropdown() {
+  try {
+    const response = await fetch("https://h3-api.onrender.com/api/Users");
+    const users = await response.json();
+    const ownerIdSelect = document.getElementById("ownerId");
+    users.forEach((user) => {
+      const option = document.createElement("option");
+      option.value = user.id;
+      option.textContent = user.username;
+      ownerIdSelect.appendChild(option);
+    });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
 }
 
+// Kald funktionen for at udfylde dropdownen, når siden indlæses
 document.addEventListener("DOMContentLoaded", populateOwnerDropdown);
