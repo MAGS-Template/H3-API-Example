@@ -24,6 +24,8 @@ namespace DomainModels
         public int Red { get; set; }
         public int Green { get; set; }
         public int Blue { get; set; }
+        public int OwnerId { get; set; }
+
         public User Owner { get; set; }
     }
     public class RGBDataDTO
