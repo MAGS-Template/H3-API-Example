@@ -17,7 +17,6 @@ body {
 }
 
 #add-color-form {
-  /* Bevar tidligere stiler */
   width: 300px;
   max-width: 100%;
 }
@@ -27,7 +26,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 600px; /* Juster denne værdi efter behov */
+  max-width: 600px;
 }
 
 #color-container {
@@ -35,12 +34,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 660px; /* Juster denne værdi efter behov */
+  max-width: 660px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px; /* Tilføj en margin for at give plads mellem overskriften og formularen */
+  margin-bottom: 20px;
 }
 
 #add-color-form {
@@ -86,4 +85,23 @@ h1 {
 
 #add-color-form button:hover {
   background-color: #0056b3;
+}
+#ownerId {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+#ownerId:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

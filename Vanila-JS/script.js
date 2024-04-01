@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error:", error));
 });
 
-// Funktion til at opdatere forhåndsvisningen af farven
 function updatePreview() {
   const red = document.getElementById("red").value;
   const green = document.getElementById("green").value;
@@ -32,16 +31,14 @@ function updatePreview() {
   preview.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
-// Tilføj event listeners til inputfelterne for at opdatere forhåndsvisningen
 document.getElementById("red").addEventListener("input", updatePreview);
 document.getElementById("green").addEventListener("input", updatePreview);
 document.getElementById("blue").addEventListener("input", updatePreview);
 
-// Opdater formularen til at inkludere en forhåndsvisning af farven
 document
   .getElementById("color-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Forhindrer formularen i at genindlæse siden
+    event.preventDefault();
 
     const red = document.getElementById("red").value;
     const green = document.getElementById("green").value;
@@ -65,7 +62,6 @@ document
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        // Opdater siden med den nye farve
         const container = document.getElementById("color-container");
         const colorDiv = document.createElement("div");
         colorDiv.style.backgroundColor = `rgb(${data.red}, ${data.green}, ${data.blue})`;
@@ -86,3 +82,19 @@ document
         console.error("Error:", error);
       });
   });
+function populateOwnerDropdown() {
+  fetch("https://h3-api.onrender.com/api/Users")
+    .then((response) => response.json())
+    .then((users) => {
+      const ownerIdSelect = document.getElementById("ownerId");
+      users.forEach((user) => {
+        const option = document.createElement("option");
+        option.value = user.id;
+        option.textContent = user.id + ": " + user.username;
+        ownerIdSelect.appendChild(option);
+      });
+    })
+    .catch((error) => console.error("Error fetching users:", error));
+}
+
+document.addEventListener("DOMContentLoaded", populateOwnerDropdown);
