@@ -17,7 +17,9 @@ namespace H3_PostgresRESTFulAPI
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.WithOrigins("*");
+                                      policy.WithOrigins("*")
+                                            .AllowAnyMethod()
+                                            .AllowAnyHeader();
                                   });
             });
 
