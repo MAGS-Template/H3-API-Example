@@ -8,7 +8,42 @@
   </head>
   <body>
     <h1>RGB Color Display</h1>
-    <div id="color-container"></div>
+    <div class="main-container">
+      <div id="add-color-form">
+        <h2>Tilføj ny RGB-data</h2>
+        <form id="color-form">
+          <label for="red">Rød:</label>
+          <input type="number" id="red" name="red" min="0" max="255" required />
+          <label for="green">Grøn:</label>
+          <input
+            type="number"
+            id="green"
+            name="green"
+            min="0"
+            max="255"
+            required
+          />
+          <label for="blue">Blå:</label>
+          <input
+            type="number"
+            id="blue"
+            name="blue"
+            min="0"
+            max="255"
+            required
+          />
+          <label for="ownerId">Ejer ID:</label>
+          <input type="number" id="ownerId" name="ownerId" required />
+          <button type="submit">Tilføj</button>
+        </form>
+        <div
+          id="color-preview"
+          style="width: 100%; height: 100px; margin-top: 20px"
+        ></div>
+      </div>
+
+      <div id="color-container"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
