@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       const container = document.getElementById("color-container");
       data.forEach((item) => {
-        console.log(item);
         const colorDiv = document.createElement("div");
         colorDiv.style.backgroundColor = `rgb(${item.red}, ${item.green}, ${item.blue})`;
         colorDiv.style.width = "100px";
