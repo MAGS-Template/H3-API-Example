@@ -1,7 +1,7 @@
 # API Eksempel til H3
 <table>
   <tr>
-    <th align="center">
+    <th align="center" width='350'>
       <img width="441" height="1">
       <p>
         <small>
@@ -26,7 +26,7 @@
         </tr>
         <tr>
           <td style="color: red;" >Video guide [TBA] </td>
-          <td align="center"> <a href="http://www.thereisnothinghere.com/"><img src='https://github.com/MAGS-Template/README-Assets/blob/main/Youtube.png?raw=true' width='75'></a></td>
+          <td align="center"> <a href="https://www.youtube.com/playlist?list=PL7-jfBWeCNfyy_Mz55t4CQ3AQvibG8jsn"><img src='https://github.com/MAGS-Template/README-Assets/blob/main/Youtube.png?raw=true' width='75'></a></td>
         </tr>
       </table>
     </th>
