@@ -2,15 +2,10 @@
 <table>
   <tr>
     <th align="center" width='350'>
-      <img width="441" height="1">
-      <p>
-        <small>
           <p> Her kan man følge eksemplet til at opsætte en ASP.NET Core web API med C#, Entity Framework og Postgres </p>
            <p> Til eksemplet bliver der brugt Postgres fra <a href="https://neon.tech/">Neon.tech</a> og Docker til at udgive applikationen på <a href="https://render.com/">Render.com</a>! </p> 
           <p> Tilgå Swagger-APIen her <a href="https://h3-api.onrender.com/swagger/index.html"> Onrender.com </a> </p>
             <p> Se RGB-dataet og tilføj nye farver på siden her <a href="https://mags-template.github.io/H3-API-Example/Vanila-JS/">Github.io</a> </p>
-        </small>
-      </p>
     </th>
     <th align="center">
       <table>
